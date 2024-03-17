@@ -1,3 +1,5 @@
+![screenshot](thumbnail.png)
+
 # Agentcards Mod
 
 ## Usage
