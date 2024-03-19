@@ -3,7 +3,7 @@
 
 badges = {
     mod = "agentcards",
-    version = "20240317",
+    version = "20240320",
     path = minetest.get_modpath("agentcards")
 }
 
@@ -14,7 +14,7 @@ local itemlist = {}
 -- go over each texture, filter for id badges, remove leading "agentcards" and file extension ".png" and concatenate into itemlist
 for _, filename in pairs(agentcards_texture_list) do
     local nameparts = string.gsub(filename, "[.]", "_"):split("_")
-    if filename ~= "agentcards_handbook.png" and filename ~= "agentcards_serasum_nft.png" and filename ~="agentcards_hat.png" then
+    if filename ~= "agentcards_handbook.png" and filename ~= "agentcards_serasum_nft.png" and filename ~="agentcards_cap.png" then
         if nameparts[#nameparts]:lower() == 'png' then
             table.remove(nameparts, 1)
             table.remove(nameparts, #nameparts)
@@ -66,8 +66,8 @@ minetest.register_craftitem("agentcards:serasum_nft", {
                 end
         })
 
-minetest.register_craftitem("agentcards:graduation_hat", {
-            description = "Graduation hat",
-            inventory_image = "agentcards_hat.png",
+minetest.register_craftitem("agentcards:graduation_cap", {
+            description = "Graduation cap",
+            inventory_image = "agentcards_caü.png",
             stack_max = 1
         })
